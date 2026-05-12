@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-05-10T17:35:47.007657",
+  "splits": {
+    "train": {
+      "total": 9630,
+      "domain_distribution": {
+        "menstruação": 3000,
+        "obstetrícia": 3000,
+        "neonatologia": 1970,
+        "ginecologia": 541,
+        "oncologia_preventiva": 327,
+        "saúde_mental": 262,
+        "violência_doméstica": 187,
+        "planejamento_familiar": 184,
+        "menopausa_climatério": 123,
+        "amamentação": 36
+      },
+      "risk_distribution": {
+        "baixo": 9630
+      },
+      "language_distribution": {
+        "en": 7342,
+        "mixed": 2288
+      },
+      "unsafe_flagged": 0
+    },
+    "validation": {
+      "total": 1561,
+      "domain_distribution": {
+        "menstruação": 748,
+        "obstetrícia": 395,
+        "neonatologia": 217,
+        "ginecologia": 77,
+        "oncologia_preventiva": 32,
+        "saúde_mental": 28,
+        "planejamento_familiar": 25,
+        "violência_doméstica": 24,
+        "menopausa_climatério": 12,
+        "amamentação": 3
+      },
+      "risk_distribution": {
+        "baixo": 1561
+      },
+      "language_distribution": {
+        "en": 1173,
+        "mixed": 388
+      }
+    },
+    "test": {
+      "total": 45,
+      "domain_distribution": {
+        "menstruação": 45
+      }
+    }
+  },
+  "output_files": {
+    "train": "C:\\Users\\Allan Lima\\Desktop\\FIAP Challenger 3\\new\\data\\processed\\train.jsonl",
+    "validation": "C:\\Users\\Allan Lima\\Desktop\\FIAP Challenger 3\\new\\data\\processed\\validation.jsonl",
+    "test": "C:\\Users\\Allan Lima\\Desktop\\FIAP Challenger 3\\new\\data\\processed\\test.jsonl"
+  },
+  "notes": [
+    "Exemplos com unsafe_flag=true foram mantidos no dataset mas marcados para revisão manual.",
+    "Todos os exemplos de violência doméstica recebem nota de segurança quando não contêm referência a serviços de apoio.",
+    "Dados de menstrual_health (test) foram separados para avaliação clínica."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-05-09T17:09:17.071728",
+  "duration_seconds": 51.359112,
+  "steps_successful": [
+    "auditoria",
+    "preprocessamento",
+    "avaliação"
+  ],
+  "steps_failed": [
+    "finetune"
+  ],
+  "overall_status": "PARCIAL",
+  "next_steps": [
+    "Revisar reports/ para relatórios detalhados de cada etapa.",
+    "Validar exemplos com unsafe_flag=true no dataset de treino.",
+    "Obter revisão de especialista clínico antes do uso em produção.",
+    "Consultar SAFETY_GUIDE.md antes de implantar o modelo."
+  ]
+}

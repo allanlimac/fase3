@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-05-12T06:16:50.922019",
+  "duration_seconds": 128532.765197,
+  "config": {
+    "base_model": "google/gemma-2-2b-it",
+    "use_qlora": true,
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "num_train_epochs": 3,
+    "per_device_train_batch_size": 1,
+    "per_device_eval_batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 0.0002,
+    "lr_scheduler_type": "cosine",
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.01,
+    "max_seq_length": 256,
+    "fp16": false,
+    "bf16": true,
+    "eval_strategy": "steps",
+    "eval_steps": 100,
+    "save_steps": 200,
+    "logging_steps": 25,
+    "load_best_model_at_end": true,
+    "metric_for_best_model": "eval_loss",
+    "save_total_limit": 3,
+    "seed": 42,
+    "push_to_hub": false,
+    "hub_model_id": "org/womenhealth-llm"
+  },
+  "metrics": {
+    "train_loss": 0.015774986452958314,
+    "runtime_seconds": 128481.3635,
+    "samples_per_second": 0.225,
+    "global_step": 7224
+  },
+  "output": {
+    "checkpoints_dir": "C:\\Users\\Allan Lima\\Desktop\\FIAP Challenger 3\\new\\model_output\\checkpoints",
+    "final_model_dir": "C:\\Users\\Allan Lima\\Desktop\\FIAP Challenger 3\\new\\model_output\\womenhealth-llm-final"
+  },
+  "next_steps": [
+    "Executar 04_evaluate.py para avaliação clínica.",
+    "Executar 05_clinical_tests.py para testes obrigatórios de segurança.",
+    "Revisar exemplos com unsafe_flag=true nos dados de treino."
+  ]
+}

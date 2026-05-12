@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-05-09T17:08:26.496911",
+  "datasets": {
+    "musicotherapy_obstetric": {
+      "train": {
+        "total_rows": 1678,
+        "empty_rows": 0,
+        "duplicate_rows": 0,
+        "unsafe_content_rows": 0,
+        "risk_distribution": {
+          "baixo": 1678,
+          "moderado": 0,
+          "alto": 0,
+          "emergência": 0
+        },
+        "usable_rows": 1678
+      },
+      "validation": {
+        "total_rows": 187,
+        "empty_rows": 0,
+        "duplicate_rows": 0,
+        "unsafe_content_rows": 0,
+        "risk_distribution": {
+          "baixo": 187,
+          "moderado": 0,
+          "alto": 0,
+          "emergência": 0
+        },
+        "usable_rows": 187
+      }
+    },
+    "women_health_mini": {
+      "train": {
+        "total_rows": 10348,
+        "empty_rows": 0,
+        "parse_errors": 0,
+        "multi_turn_conversations": 0,
+        "unsafe_content_rows": 0,
+        "risk_distribution": {
+          "baixo": 10348,
+          "moderado": 0,
+          "alto": 0,
+          "emergência": 0
+        },
+        "usable_rows": 10348
+      }
+    },
+    "domestic_violence": {
+      "train": {
+        "total_rows": 14,
+        "empty_questions": 0,
+        "empty_responses": 0,
+        "high_quality_rows": 7,
+        "unsafe_content_rows": 0,
+        "score_statistics": {
+          "helpfulness": {
+            "mean": 2.334,
+            "min": 1.211,
+            "max": 3.703
+          },
+          "correctness": {
+            "mean": 2.394,
+            "min": 1.164,
+            "max": 3.719
+          },
+          "coherence": {
+            "mean": 3.546,
+            "min": 3.219,
+            "max": 3.859
+          },
+          "complexity": {
+            "mean": 1.367,
+            "min": 1.047,
+            "max": 1.664
+          },
+          "verbosity": {
+            "mean": 1.309,
+            "min": 0.949,
+            "max": 1.656
+          }
+        },
+        "filter_thresholds": {
+          "correctness": 3.0,
+          "helpfulness": 3.0,
+          "coherence": 3.0
+        },
+        "usable_rows": 7
+      }
+    },
+    "menstrual_health": {
+      "train": {
+        "total_rows": 530,
+        "empty_instructions": 0,
+        "empty_outputs": 0,
+        "duplicate_rows": 12,
+        "unsafe_content_rows": 0,
+        "risk_distribution": {
+          "baixo": 530,
+          "moderado": 0,
+          "alto": 0,
+          "emergência": 0
+        },
+        "usable_rows": 518
+      },
+      "test": {
+        "total_rows": 45,
+        "empty_instructions": 0,
+        "empty_outputs": 0,
+        "duplicate_rows": 0,
+        "unsafe_content_rows": 0,
+        "risk_distribution": {
+          "baixo": 45,
+          "moderado": 0,
+          "alto": 0,
+          "emergência": 0
+        },
+        "usable_rows": 45
+      }
+    }
+  },
+  "summary": {
+    "total_usable_examples": 12783,
+    "audit_status": "concluída",
+    "next_step": "Executar 02_preprocess_data.py para converter para JSONL",
+    "recommendations": [
+      "domestic-violence-dataset-prep.xlsx tem poucos exemplos (14 total, 7 de alta qualidade). Considere buscar datasets adicionais de violência doméstica.",
+      "women-health-mini.xlsx tem conversas em inglês. O pré-processamento incluirá campo de idioma para filtragem ou tradução futura.",
+      "musicotherapy_obstetric_dataset.xlsx contém tokens LLaMA que serão removidos no pré-processamento.",
+      "Todos os exemplos com conteúdo inseguro serão revisados e rotulados no pré-processamento."
+    ]
+  }
+}
