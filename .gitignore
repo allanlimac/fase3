@@ -16,10 +16,6 @@ logs/
 # Variáveis de ambiente (segurança)
 .env
 
-# Datasets brutos e planilhas (opcionais — remova as linhas se quiser subir)
-data/raw/
-*.xlsx
-
 # Arquivos temporários do Windows
 Thumbs.db
 desktop.ini
